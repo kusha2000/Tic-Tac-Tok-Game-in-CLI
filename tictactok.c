@@ -155,7 +155,7 @@ int main(){
         printf("\t============================\n\n");
     }
 
-
+    delay(10);
 
     return 0;
 }
@@ -170,4 +170,11 @@ int check_numeric(char name[100]){
     return 1;
 
 }
+void delay(int numOfSec)
+{
+	int numOfMilliSec = 1000 * numOfSec;
+	time_t startTime = clock();
+	while(clock() < startTime + numOfMilliSec);
+}
+
 
